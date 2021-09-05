@@ -18,12 +18,12 @@ body {
 main {
    display: grid;
    grid-template: min-content 1fr min-content / 1fr;
-   margin: 50px;
+   margin: 20px;
    align-self: center;
    max-width: 375px;
    background-color: hsl(0, 0%, 100%);
    box-shadow: -4px 1px 31px -2px rgba(0,0,0,0.68);
-   border-radius: 20px 20px 20px 20px;
+   border-radius: 10px 10px 10px 10px;
 }
 
 div#left-wrap {
@@ -34,8 +34,9 @@ div#left-wrap {
 div#left-wrap > img {
     object-fit: cover;
     object-position: top;
-    height: 85%;
+    height: 250px;
     width: 100%;
+    border-radius: 10px 10px 0 0;
 }
 
 div#right-wrap {
@@ -56,7 +57,7 @@ div#bottom {
     justify-content: space-between;
     margin-top: 20px;
     align-items: center;
-    background-color: lawngreen;
+    
 }
 
 div#profile {
@@ -77,11 +78,24 @@ div#profile > p#name {
     font-weight: 700;
 }
 
+button#share {
+    background-color: hsl(210, 46%, 95%);
+    border-radius: 100%;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    border: 0;
+}
+
+button#share > img {
+    object-position: center;
+    object-fit: contain;
+
+}
+
 
 
 @media all and (min-width: 700px){
-    body {
-    }
 
     main {
         grid-template: repeat(2, min-content) / 1.2fr 2fr;
@@ -102,5 +116,6 @@ div#profile > p#name {
         object-position: left;
         height: 100%;
         width: 100%;
+        border-radius: 10px 0 0 10px;
     }
 }
