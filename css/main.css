@@ -16,6 +16,7 @@ body {
 }
 
 main {
+    position: relative;
    display: grid;
    grid-template: min-content 1fr min-content / 1fr;
    margin: 15px;
@@ -24,6 +25,7 @@ main {
    background-color: hsl(0, 0%, 100%);
    box-shadow: 3px 8px 14px -13px rgba(0,0,0,1);
    border-radius: 10px 10px 10px 10px;
+   overflow: hidden;
 }
 
 div#left-wrap {
@@ -40,7 +42,7 @@ div#left-wrap > img {
 }
 
 div#right-wrap {
-    margin: 2em 2em 1.5em 2em;
+    margin: 2em 2em .8em 2em;
 }
 
 article > h1 {
@@ -93,12 +95,47 @@ button#share {
     width: 30px;
     cursor: pointer;
     border: 0;
+    z-index: 1;
 }
 
 button#share > img {
     object-position: center;
     object-fit: contain;
 
+}
+
+div#sm-nav {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 23.8em;
+    right: -23.8em;
+    margin-top: 35.5em;
+    padding: 1.8em 2em;
+    background-color: hsl(217, 19%, 35%);
+    border-radius: 0 0 10px 10px;
+    transition: transform 0.3s ease-in-out;
+    
+}
+
+div.is-open {
+    transform: translateX(-23.8em);
+}
+
+div#sm-nav > p {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: hsl(220, 15%, 73%);
+    margin: 0 1.3em 0 0;
+}
+
+div#sm-nav > img {
+    margin-right: 1.6em;
+    height: 18px;
+    width: 18px;
+   
 }
 
 
