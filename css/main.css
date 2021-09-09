@@ -16,7 +16,7 @@ body {
 }
 
 main {
-    position: relative;
+   position: relative;
    display: grid;
    grid-template: min-content 1fr min-content / 1fr;
    margin: 15px;
@@ -53,7 +53,7 @@ article > h1 {
 }
 
 article > p {
-    line-height: 1.7;
+    line-height: 1.6;
     color: hsl(214, 14%, 30%);
 }
 
@@ -111,32 +111,51 @@ div#sm-nav {
     align-items: center;
     width: 23.8em;
     right: -23.8em;
-    margin-top: 35.5em;
-    padding: 1.8em 2em;
+    margin-top: 34.9em;
+    padding: 1.5em 2em;
     background-color: hsl(217, 19%, 35%);
     border-radius: 0 0 10px 10px;
     transition: transform 0.3s ease-in-out;
     
 }
 
+/*div#sm-nav:before {
+    content: "";
+    position: absolute;
+    right: 8.7em;
+    top: 4em;
+    width: 0;
+    height: 0;
+    border-top: 13px solid hsl(217, 19%, 35%);
+    border-right: 13px solid transparent;
+    border-left: 13px solid transparent;
+    
+    
+}*/
+
 div.is-open {
     transform: translateX(-23.8em);
 }
 
 div#sm-nav > p {
-    font-size: 12px;
+    font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 5px;
     color: hsl(220, 15%, 73%);
-    margin: 0 1.3em 0 0;
+    margin: 0 1.9em 0 0;
 }
 
 div#sm-nav > img {
-    margin-right: 1.6em;
-    height: 18px;
-    width: 18px;
+    height: 17px;
+    width: 17px;
    
 }
+
+div#sm-nav > a {
+    margin-right: 1.6em;
+}
+
+
 
 
 
@@ -145,6 +164,7 @@ div#sm-nav > img {
     main {
         grid-template: repeat(2, min-content) / 1.2fr 1.8fr;
         max-width: 750px;
+        overflow: visible;
     }
 
     div#left-wrap {
@@ -170,5 +190,40 @@ div#sm-nav > img {
 
     div#bottom {
         margin: 15px 0;
+    }
+
+    div#sm-nav {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 20em;
+        height: 4em;
+        right: -5.4em;
+        margin-top: 10.5em;
+        padding: 0 3.2em;
+        background-color: hsl(217, 19%, 35%);
+        border-radius: 10px 10px 10px 10px;
+        opacity: 0; 
+    }
+
+    div#sm-nav:before {
+        content: "";
+        position: absolute;
+        right: 8.7em;
+        top: 4em;
+        width: 0;
+        height: 0;
+        border-top: 13px solid hsl(217, 19%, 35%);
+        border-right: 13px solid transparent;
+        border-left: 13px solid transparent;
+        
+        
+    }
+    
+    div#sm-nav.is-open {
+        right: -29.4em;
+        opacity: 1;
+        transition: 0.3s ease-in-out;
     }
 }
