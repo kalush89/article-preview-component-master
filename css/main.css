@@ -14,14 +14,14 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-height: 0vh;
+    min-height: 100vh;
 }
 
 main {
    position: relative;
    display: grid;
    grid-template: min-content 1fr min-content / 1fr;
-   margin: 15px;
+   margin: 15px 0;
    max-width: 310px;
    background-color: hsl(0, 0%, 100%);
    box-shadow: 3px 8px 14px -13px rgba(0,0,0,1);
@@ -159,7 +159,6 @@ div#sm-nav > a {
         grid-template: repeat(2, min-content) / 1.2fr 1.8fr;
         max-width: 750px;
         overflow: visible;
-        min-height: 100vh;
     }
 
     div#left-wrap {
