@@ -14,7 +14,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 0vh;
 }
 
 main {
@@ -159,6 +159,7 @@ div#sm-nav > a {
         grid-template: repeat(2, min-content) / 1.2fr 1.8fr;
         max-width: 750px;
         overflow: visible;
+        min-height: 100vh;
     }
 
     div#left-wrap {
