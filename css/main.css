@@ -55,7 +55,7 @@ article > h1 {
 
 article > p {
     line-height: 1.6;
-    color: hsl(214, 14%, 30%);
+    color: hsl(208, 5%, 52%);
 }
 
 div#bottom {
@@ -86,7 +86,7 @@ div#profile > p#name {
 }
 
 div#profile > p#date {
-    color: hsl(214, 14%, 30%);
+    color: hsl(208, 5%, 52%);
 }
 
 button#share {
@@ -132,7 +132,7 @@ div.is-open {
 }
 
 div#sm-nav > p {
-    font-size: 11px;
+    font-size: 12px;
     text-transform: uppercase;
     letter-spacing: 5px;
     color: hsl(220, 15%, 73%);
