@@ -11,8 +11,10 @@ body {
     font-size: 13px;
     background-color: hsl(210, 46%, 95%);
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    margin: auto 0;
+    min-height: 100vh;
 }
 
 main {
@@ -20,7 +22,6 @@ main {
    display: grid;
    grid-template: min-content 1fr min-content / 1fr;
    margin: 15px;
-   align-self: center;
    max-width: 310px;
    background-color: hsl(0, 0%, 100%);
    box-shadow: 3px 8px 14px -13px rgba(0,0,0,1);
@@ -101,7 +102,14 @@ button#share {
 button#share > img {
     object-position: center;
     object-fit: contain;
+}
 
+button#share.is-dark {
+   background-color: hsl(214, 17%, 51%);
+}
+
+button#share.is-dark img{
+    filter: invert(0.5) sepia(0) saturate(1) hue-rotate(0deg) brightness(5);
 }
 
 div#sm-nav {
@@ -118,20 +126,6 @@ div#sm-nav {
     transition: transform 0.3s ease-in-out;
     
 }
-
-/*div#sm-nav:before {
-    content: "";
-    position: absolute;
-    right: 8.7em;
-    top: 4em;
-    width: 0;
-    height: 0;
-    border-top: 13px solid hsl(217, 19%, 35%);
-    border-right: 13px solid transparent;
-    border-left: 13px solid transparent;
-    
-    
-}*/
 
 div.is-open {
     transform: translateX(-23.8em);
@@ -224,6 +218,6 @@ div#sm-nav > a {
     div#sm-nav.is-open {
         right: -29.4em;
         opacity: 1;
-        transition: 0.3s ease-in-out;
+        transition: width 0.1s;
     }
 }
